@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        height: 50px;
+        background: aqua;
+      }
+
+      footer {
+        height: 50px;
+        background: blueviolet;
+      }
+
+      body {
+        min-width: 700px;
+      }
+
+      /*圣杯*/
+      .container {
+        width: 100%;
+        height: 200px;
+        padding: 0 200px;
+      }
+
+      .middle {
+        background: blue;
+        width: 100%;
+        height: 100%;
+        float: left;
+      }
+
+      .left {
+        position: relative;
+        background: red;
+        height: 100%;
+        width: 200px;
+        float: left;
+        margin-left: -100%;
+        left: -200px;
+      }
+
+      .right {
+        position: relative;
+        background: chartreuse;
+        height: 100%;
+        width: 200px;
+        float: left;
+        margin-left: -200px;
+        right: 200px;
+      }
+
+      /*双飞翼*/
+      .container-2 {
+        height: 200px;
+      }
+
+      .main-2 {
+        width: 100%;
+        height: 100%;
+        float: left;
+      }
+
+      .middle-2 {
+        margin: 0 200px;
+        height: 100%;
+        background: blue;
+      }
+
+      .left-2 {
+        margin-left: -100%;
+        width: 200px;
+        height: 100%;
+        background: red;
+        float: left;
+      }
+
+      .right-2 {
+        margin-left: -200px;
+        width: 200px;
+        height: 100%;
+        background: chartreuse;
+        float: left;
+      }
+
+      /*flex*/
+      .container-3 {
+        height: 200px;
+        display: flex;
+      }
+
+      .middle-3 {
+        flex: 1 1 auto; /*拉伸 收缩 默认值*/
+        height: 100%;
+        background: blue;
+      }
+
+      .left-3 {
+        height: 100%;
+        background: red;
+        order: -1; /*排在第一*/
+        flex: 0 0 200px;
+      }
+
+      .right-3 {
+        width: 200px;
+        height: 100%;
+        background: chartreuse;
+        flex: 0 0 200px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>圣杯布局</header>
+    <div class="container">
+      <div class="middle">middle</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <header>双飞翼布局</header>
+    <div class="container-2">
+      <div class="main-2">
+        <div class="middle-2">middle</div>
+      </div>
+      <div class="left-2">left</div>
+      <div class="right-2">right</div>
+    </div>
+    <header>flex</header>
+    <div class="container-3">
+      <div class="middle-3">middle</div>
+      <div class="left-3">left</div>
+      <div class="right-3">right</div>
+    </div>
+    <footer>footer</footer>
+  </body>
+</html>
