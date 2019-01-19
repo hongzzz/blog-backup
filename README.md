@@ -1,4 +1,4 @@
-# BLOG
+# blog
 
 内容可见 [Issues](https://github.com/hongzzz/blog/issues)，欢迎交流
 
