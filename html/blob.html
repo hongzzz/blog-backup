@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blob</title>
+    <style>
+        #img{
+            display: block;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<input id="input-file" type="file">
+<img id="img" src="" alt="">
+<p id="url"></p>
+<script>
+    const input = document.querySelector('#input-file');
+    const img = document.querySelector('#img');
+    const showUrl  = document.querySelector('#url');
+    input.addEventListener('change', (e) => {
+        const url = URL.createObjectURL(e.target.files[0]);
+        showUrl.innerHTML = url;
+        img.src = url;
+    });
+</script>
+</body>
+</html>
